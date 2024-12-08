@@ -32,8 +32,12 @@ CREATE TABLE siwaka_dishes.employee (
     email VARCHAR(100) NOT NULL UNIQUE,
     branchCode INT NOT NULL,
     jobTitle VARCHAR(50) NOT NULL,
+    reportsTo INT,
     CONSTRAINT FK_1_branch_to_M_employee FOREIGN KEY (branchCode) REFERENCES siwaka_dishes.branch (branchCode)
         ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    CONSTRAINT FK_1_employee_to_M_employee FOREIGN KEY (reportsTo) REFERENCES siwaka_dishes.employee (employeeNumber)
+        ON DELETE SET NULL
         ON UPDATE CASCADE
 );
 
@@ -122,3 +126,4 @@ CREATE TABLE siwaka_dishes.orderDetail (
         ON DELETE RESTRICT
         ON UPDATE CASCADE
 );
+

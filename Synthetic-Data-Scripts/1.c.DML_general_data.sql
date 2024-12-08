@@ -1,6 +1,6 @@
 -- Synthetic data for:
 -- 1. Branch: 20 branches
--- 2. Employee: 30 employees
+-- 2. Employee: 52 employees
 -- 3. Order Status (Lookup Table): 5 order statuses
 -- 4. Payment Method (Lookup Table): 11 payment methods
 -- 5. Product: 100 products
@@ -35,38 +35,112 @@ INSERT INTO siwaka_dishes.branch (branchCode, phone, addressLine1, addressLine2,
 (20, '0710000005', 'Nyeri Mall', 'Gakere Rd', '10100', 'Nyeri', 'Nyeri Central');
 
 -- Insert data into employee Table
-INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES
-('Mwangi', 'Kamau', 'mkamau@siwakadishes.co.ke', 1, 'Chef'),
-('Achieng', 'Odhiambo', 'aodhiambo@siwakadishes.co.ke', 2, 'Sous Chef'),
-('Mutua', 'Muthoni', 'mmuthoni@siwakadishes.co.ke', 3, 'Pastry Chef'),
-('Kiprotich', 'Koech', 'kkoech@siwakadishes.co.ke', 4, 'Line Cook'),
-('Wanjiku', 'Njeri', 'wnjeri@siwakadishes.co.ke', 5, 'Prep Cook'),
-('Otieno', 'Omondi', 'oomondi@siwakadishes.co.ke', 6, 'Dishwasher'),
-('Nyambura', 'Wambui', 'nwambui@siwakadishes.co.ke', 7, 'Restaurant Manager'),
-('Karanja', 'Njenga', 'knjenga@siwakadishes.co.ke', 8, 'Assistant Manager'),
-('Muthoni', 'Wangari', 'mwangari@siwakadishes.co.ke', 9, 'Host'),
-('Kibet', 'Cheruiyot', 'kcheruiyot@siwakadishes.co.ke', 10, 'Server'),
-('Amina', 'Hassan', 'ahassan@siwakadishes.co.ke', 11, 'Bartender'),
-('Kamau', 'Mwangi', 'kmwangi@siwakadishes.co.ke', 12, 'Busser'),
-('Wanjiru', 'Mumbi', 'wmumbi@siwakadishes.co.ke', 13, 'Barback'),
-('Mutiso', 'Kilonzo', 'mkilonzo@siwakadishes.co.ke', 14, 'Expeditor'),
-('Njeri', 'Wanjiku', 'nwanjiku@siwakadishes.co.ke', 15, 'Food Runner'),
-('Kiplangat', 'Kipchoge', 'kkipchoge@siwakadishes.co.ke', 16, 'Sommelier'),
-('Muriithi', 'Githinji', 'mgithinji@siwakadishes.co.ke', 17, 'Barista'),
-('Nyokabi', 'Wairimu', 'nwairimu@siwakadishes.co.ke', 18, 'Catering Manager'),
-('Mugambi', 'Muriuki', 'mmuriuki@siwakadishes.co.ke', 19, 'Event Coordinator'),
-('Wairimu', 'Nyokabi', 'wnyokabi@siwakadishes.co.ke', 20, 'Marketing Manager'),
-('Kwame', 'Nkrumah', 'knkrumah@siwakadishes.co.ke', 1, 'Chef de Partie'),
-('Ayo', 'Adebayo', 'aadebayo@siwakadishes.co.ke', 2, 'Commis Chef'),
-('Binyavanga', 'Wainaina', 'bwainaina@siwakadishes.co.ke', 3, 'Garde Manger'),
-('Fatou', 'Bensouda', 'fbensouda@siwakadishes.co.ke', 4, 'Patissier'),
-('Ali', 'Mazrui', 'amazrui@siwakadishes.co.ke', 5, 'Poissonnier'),
-('Jillian', 'Amethyst', 'jamethyst@siwakadishes.co.ke', 6, 'Rotisseur'),
-('Jasper', 'Onyx', 'jonyx@siwakadishes.co.ke', 7, 'Saucier'),
-('Janelle', 'Pearl', 'jpearl@siwakadishes.co.ke', 8, 'Tournant'),
-('Jethro', 'Garnet', 'jgarnet@siwakadishes.co.ke', 9, 'Communard'),
-('Jocasta', 'Amber', 'jamber@siwakadishes.co.ke', 10, 'Boucher');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Pauline', 'Kabongo', 'pauline.kabongo@siwakadishes.co.ke', 4, 'Cashier');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Felicite', 'Omar', 'felicite.omar@siwakadishes.co.ke', 3, 'Hostess');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Jean', 'Munyua', 'jean.munyua@siwakadishes.co.ke', 3, 'Assistant Manager');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Jacqueline', 'Nkurunziza', 'jacqueline.nkurunziza@siwakadishes.co.ke', 8, 'Dishwasher');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Claude', 'Mukasa', 'claude.mukasa@siwakadishes.co.ke', 10, 'Sous Chef');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Emmanuel', 'Wanyama', 'emmanuel.wanyama@siwakadishes.co.ke', 8, 'Cashier');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Claudine', 'Zuma', 'claudine.zuma@siwakadishes.co.ke', 4, 'Manager');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Patricia', 'Ali', 'patricia.ali@siwakadishes.co.ke', 9, 'Security Guard');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Felix', 'Ochieng', 'felix.ochieng@siwakadishes.co.ke', 2, 'Cook');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Josephine', 'Hassan', 'josephine.hassan@siwakadishes.co.ke', 10, 'Chef');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Marie', 'Mbeki', 'marie.mbeki@siwakadishes.co.ke', 9, 'Waiter');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Marie', 'Hassan', 'marie.hassan@siwakadishes.co.ke', 5, 'Bartender');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Patrick', 'Munyui', 'patrick.munyui@siwakadishes.co.ke', 7, 'Waitress');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Marie', 'Mutombo', 'marie.mutombo@siwakadishes.co.ke', 8, 'Cook');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Claude', 'Munywe', 'claude.munywe@siwakadishes.co.ke', 1, 'Sous Chef');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Felix', 'Malema', 'felix.malema@siwakadishes.co.ke', 8, 'Chef');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Jean', 'Omar', 'jean.omar@siwakadishes.co.ke', 9, 'Waiter');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Marie', 'Kabila', 'marie.kabila@siwakadishes.co.ke', 6, 'Cleaner');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Felix', 'Munywe', 'felix.munywe@siwakadishes.co.ke', 1, 'Chef');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Joseph', 'Munyuli', 'joseph.munyuli@siwakadishes.co.ke', 5, 'Host');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Njeri', 'Ali', 'njeri.ali@siwakadishes.co.ke', 7, 'Assistant Manager');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Patricia', 'Mbeki', 'patricia.mbeki@siwakadishes.co.ke', 10, 'Waitress');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Pauline', 'Mugisha', 'pauline.mugisha@siwakadishes.co.ke', 3, 'Cashier');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Alain', 'Munzala', 'alain.munzala@siwakadishes.co.ke', 9, 'Cashier');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Kamau', 'Ochieng', 'kamau.ochieng@siwakadishes.co.ke', 8, 'Sous Chef');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Jean', 'Njoroge', 'jean.njoroge@siwakadishes.co.ke', 8, 'Security Guard');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Wanjiku', 'Ochieng', 'wanjiku.ochieng@siwakadishes.co.ke', 8, 'Dishwasher');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Pauline', 'Mandela', 'pauline.mandela@siwakadishes.co.ke', 2, 'Cleaner');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Jean', 'Munee', 'jean.munee@siwakadishes.co.ke', 1, 'Cook');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Jacques', 'Odhiambo', 'jacques.odhiambo@siwakadishes.co.ke', 4, 'Waiter');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Alaine', 'Abdullahi', 'alaine.abdullahi@siwakadishes.co.ke', 7, 'Assistant Manager');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Felix', 'Munyuli', 'felix.munyuli@siwakadishes.co.ke', 1, 'Cleaner');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Alaine', 'Lumumba', 'alaine.lumumba@siwakadishes.co.ke', 1, 'Waitress');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Pierre', 'Kariuki', 'pierre.kariuki@siwakadishes.co.ke', 9, 'Chef');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Alain', 'Omar', 'alain.omar@siwakadishes.co.ke', 5, 'Cashier');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Mwangi', 'Mugabe', 'mwangi.mugabe@siwakadishes.co.ke', 1, 'Waitress');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Patrick', 'Mohammed', 'patrick.mohammed@siwakadishes.co.ke', 8, 'Waiter');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Marie', 'Mugisha', 'marie.mugisha@siwakadishes.co.ke', 2, 'Receptionist');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Alaine', 'Ibrahim', 'alaine.ibrahim@siwakadishes.co.ke', 9, 'Host');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Amina', 'Munyao', 'amina.munyao@siwakadishes.co.ke', 10, 'Cleaner');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Felix', 'Njoroge', 'felix.njoroge@siwakadishes.co.ke', 2, 'Cleaner');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Josephine', 'Munywe', 'josephine.munywe@siwakadishes.co.ke', 10, 'Receptionist');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Emmanuel', 'Munywe', 'emmanuel.munywe@siwakadishes.co.ke', 10, 'Waiter');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Joseph', 'Mandela', 'joseph.mandela@siwakadishes.co.ke', 9, 'Cook');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Patricia', 'Mutombo', 'patricia.mutombo@siwakadishes.co.ke', 2, 'Host');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Marie', 'Mugabe', 'marie.mugabe@siwakadishes.co.ke', 7, 'Cleaner');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Claude', 'Mandela', 'claude.mandela@siwakadishes.co.ke', 4, 'Cleaner');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Otieno', 'Hassan', 'otieno.hassan@siwakadishes.co.ke', 7, 'Bartender');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Joseph', 'Ndayishimiye', 'joseph.ndayishimiye@siwakadishes.co.ke', 2, 'Cleaner');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Pauline', 'Mbeki', 'pauline.mbeki@siwakadishes.co.ke', 3, 'Manager');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Pierre', 'Yusuf', 'pierre.yusuf@siwakadishes.co.ke', 2, 'Security Guard');
+INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES ('Pierrette', 'Mugisha', 'pierrette.mugisha@siwakadishes.co.ke', 4, 'Waitress');
+UPDATE siwaka_dishes.employee SET reportsTo = 32 WHERE employeeNumber = 42;
+UPDATE siwaka_dishes.employee SET reportsTo = 43 WHERE employeeNumber = 46;
+UPDATE siwaka_dishes.employee SET reportsTo = 52 WHERE employeeNumber = 56;
+UPDATE siwaka_dishes.employee SET reportsTo = 61 WHERE employeeNumber = 59;
+UPDATE siwaka_dishes.employee SET reportsTo = 48 WHERE employeeNumber = 60;
+UPDATE siwaka_dishes.employee SET reportsTo = 43 WHERE employeeNumber = 63;
+UPDATE siwaka_dishes.employee SET reportsTo = 43 WHERE employeeNumber = 36;
+UPDATE siwaka_dishes.employee SET reportsTo = 48 WHERE employeeNumber = 55;
+UPDATE siwaka_dishes.employee SET reportsTo = 34 WHERE employeeNumber = 65;
+UPDATE siwaka_dishes.employee SET reportsTo = 52 WHERE employeeNumber = 68;
+UPDATE siwaka_dishes.employee SET reportsTo = 77 WHERE employeeNumber = 72;
+UPDATE siwaka_dishes.employee SET reportsTo = 43 WHERE employeeNumber = 76;
+UPDATE siwaka_dishes.employee SET reportsTo = 58 WHERE employeeNumber = 78;
+UPDATE siwaka_dishes.employee SET reportsTo = 32 WHERE employeeNumber = 29;
+UPDATE siwaka_dishes.employee SET reportsTo = 30 WHERE employeeNumber = 30;
+UPDATE siwaka_dishes.employee SET reportsTo = 46 WHERE employeeNumber = 50;
+UPDATE siwaka_dishes.employee SET reportsTo = 61 WHERE employeeNumber = 77;
+UPDATE siwaka_dishes.employee SET reportsTo = 32 WHERE employeeNumber = 28;
+UPDATE siwaka_dishes.employee SET reportsTo = 43 WHERE employeeNumber = 34;
+UPDATE siwaka_dishes.employee SET reportsTo = 52 WHERE employeeNumber = 57;
+UPDATE siwaka_dishes.employee SET reportsTo = 48 WHERE employeeNumber = 74;
+UPDATE siwaka_dishes.employee SET reportsTo = 34 WHERE employeeNumber = 79;
+UPDATE siwaka_dishes.employee SET reportsTo = 48 WHERE employeeNumber = 39;
+UPDATE siwaka_dishes.employee SET reportsTo = 52 WHERE employeeNumber = 47;
+UPDATE siwaka_dishes.employee SET reportsTo = 58 WHERE employeeNumber = 62;
+UPDATE siwaka_dishes.employee SET reportsTo = 34 WHERE employeeNumber = 45;
+UPDATE siwaka_dishes.employee SET reportsTo = 37 WHERE employeeNumber = 40;
+UPDATE siwaka_dishes.employee SET reportsTo = 30 WHERE employeeNumber = 48;
+UPDATE siwaka_dishes.employee SET reportsTo = 34 WHERE employeeNumber = 58;
+UPDATE siwaka_dishes.employee SET reportsTo = 77 WHERE employeeNumber = 73;
+UPDATE siwaka_dishes.employee SET reportsTo = 77 WHERE employeeNumber = 75;
+UPDATE siwaka_dishes.employee SET reportsTo = 61 WHERE employeeNumber = 31;
+UPDATE siwaka_dishes.employee SET reportsTo = 43 WHERE employeeNumber = 33;
+UPDATE siwaka_dishes.employee SET reportsTo = 34 WHERE employeeNumber = 41;
+UPDATE siwaka_dishes.employee SET reportsTo = 42 WHERE employeeNumber = 43;
+UPDATE siwaka_dishes.employee SET reportsTo = 46 WHERE employeeNumber = 52;
+UPDATE siwaka_dishes.employee SET reportsTo = 42 WHERE employeeNumber = 53;
+UPDATE siwaka_dishes.employee SET reportsTo = 48 WHERE employeeNumber = 54;
+UPDATE siwaka_dishes.employee SET reportsTo = 42 WHERE employeeNumber = 64;
+UPDATE siwaka_dishes.employee SET reportsTo = 34 WHERE employeeNumber = 35;
+UPDATE siwaka_dishes.employee SET reportsTo = 48 WHERE employeeNumber = 38;
+UPDATE siwaka_dishes.employee SET reportsTo = 48 WHERE employeeNumber = 44;
+UPDATE siwaka_dishes.employee SET reportsTo = 42 WHERE employeeNumber = 51;
+UPDATE siwaka_dishes.employee SET reportsTo = 61 WHERE employeeNumber = 61;
+UPDATE siwaka_dishes.employee SET reportsTo = 52 WHERE employeeNumber = 66;
+UPDATE siwaka_dishes.employee SET reportsTo = 32 WHERE employeeNumber = 71;
+UPDATE siwaka_dishes.employee SET reportsTo = 61 WHERE employeeNumber = 32;
+UPDATE siwaka_dishes.employee SET reportsTo = 30 WHERE employeeNumber = 37;
+UPDATE siwaka_dishes.employee SET reportsTo = 43 WHERE employeeNumber = 49;
+UPDATE siwaka_dishes.employee SET reportsTo = 52 WHERE employeeNumber = 67;
+UPDATE siwaka_dishes.employee SET reportsTo = 43 WHERE employeeNumber = 69;
+UPDATE siwaka_dishes.employee SET reportsTo = 30 WHERE employeeNumber = 70;
 
+-- Insert data into Order Status Lookup Table
 INSERT INTO siwaka_dishes.orderStatus (orderStatusID, status) VALUES 
 (1, 'Pending'),
 (2, 'Processing'),
