@@ -5,8 +5,11 @@ first_names = [
     'Mwangi', 'Achieng', 'Kamau', 'Wanjiku', 'Otieno', 'Njeri', 'Kiptoo', 'Wambui', 'Mutiso', 'Amina',
     'Jean', 'Marie', 'Claude', 'Patrick', 'Emmanuel', 'Joseph', 'Paul', 'Pierre', 'Jacques', 'Michel',
     'Felix', 'Alain', 'Jeanne', 'Marie', 'Claudine', 'Patricia', 'Emmanuelle', 'Josephine', 'Pauline',
-    'Pierrette', 'Jacqueline', 'Michelle', 'Felicite', 'Alaine'
+    'Pierrette', 'Jacqueline', 'Michelle', 'Felicite', 'Alaine', 'Kwame', 'Chinua', 'Ngozi', 'Thabo', 'Zanele',
+    'Bongani', 'Kofi', 'Adebayo', 'Fatou', 'Lerato', 'Adisa', 'Binta', 'Chiamaka', 'Dayo', 'Ebele',
+    'Femi', 'Gbemisola', 'Hawa', 'Ifeanyi', 'Jelani'
 ]
+
 last_names = [
     'Omondi', 'Kiplagat', 'Mutua', 'Wanyama', 'Odhiambo', 'Kariuki', 'Njoroge', 'Ochieng', 'Muthoni', 'Mwangi',
     'Mugisha', 'Ndayishimiye', 'Nkurunziza', 'Kagame', 'Bizimana', 'Mukasa', 'Kabongo', 'Mutombo', 'Kabila',
@@ -33,15 +36,17 @@ cursor = conn.cursor()
 
 # Generate 52 employees (synthetic data)
 for i in range(52):
+    employee_number = i + 1  # Assuming employee numbers start from 1
     first_name = random.choice(first_names)
     last_name = random.choice(last_names)
-    email = f'{first_name.lower()}.{last_name.lower()}@siwakadishes.co.ke'
+    email = f'{first_name[0].lower()}{last_name.lower()}@siwakadishes.co.ke'
+    email = f'{first_name[0].lower()}{last_name.lower()}{random.randint(1, 100)}@siwakadishes.co.ke'
     branch_code = random.randint(1, 10)
     job_title = random.choice(job_titles)
 
     cursor.execute(
-        "INSERT INTO siwaka_dishes.employee (firstName, lastName, email, branchCode, jobTitle) VALUES (%s, %s, %s, %s, %s)",
-        (first_name, last_name, email, branch_code, job_title)
+        "INSERT INTO siwaka_dishes.employee (employeeNumber, firstName, lastName, email, branchCode, jobTitle) VALUES (%s, %s, %s, %s, %s, %s)",
+        (employee_number, first_name, last_name, email, branch_code, job_title)
     )
 
     with open('./Synthetic-Data-Scripts/1.b.DML_employee_data.sql', 'a') as f:

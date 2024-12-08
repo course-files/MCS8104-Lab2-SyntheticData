@@ -1,8 +1,6 @@
 services:
 
   mysql:
-    # Connect via:
-    # docker exec -it mysql-8.3.0-mcs8104-lab2 mysql --port 3306 -u student -p
     image: customized-mysql:1.0
     hostname: mysql-8.3.0-mcs8104-lab2
     container_name: mysql-8.3.0-mcs8104-lab2
