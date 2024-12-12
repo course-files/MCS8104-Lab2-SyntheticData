@@ -1,3 +1,5 @@
+LOCK TABLES `customer` WRITE;
+/*!40000 ALTER TABLE `customer` DISABLE KEYS */;
 INSERT INTO siwaka_dishes.customer (customerName, contactFirstName, contactLastName, phone, addressLine1, addressLine2, postalCode, county, subCounty, salesRepEmployeeNumber) VALUES ('[Business] Hemingways Residences', 'Pauline', 'Munzala', '0771178470', '538 Karen Rd', 'Apt 65', '83324', 'Wajir', 'Kisumu East', 9);
 INSERT INTO siwaka_dishes.customer (customerName, contactFirstName, contactLastName, phone, addressLine1, addressLine2, postalCode, county, subCounty, salesRepEmployeeNumber) VALUES ('[Business] Diani Retreat', 'Jacqueline', 'Mbeki', '0703967683', '807 Uhuru Hwy', 'Apt 5', '44420', 'Wajir', 'Nyali', 6);
 INSERT INTO siwaka_dishes.customer (customerName, contactFirstName, contactLastName, phone, addressLine1, addressLine2, postalCode, county, subCounty, salesRepEmployeeNumber) VALUES ('Alaine Munee', 'Alaine', 'Munee', '0792470219', '121 Kenyatta Ave', 'Apt 88', '53807', 'Nairobi', 'Changamwe', 20);
@@ -1198,3 +1200,5 @@ INSERT INTO siwaka_dishes.customer (customerName, contactFirstName, contactLastN
 INSERT INTO siwaka_dishes.customer (customerName, contactFirstName, contactLastName, phone, addressLine1, addressLine2, postalCode, county, subCounty, salesRepEmployeeNumber) VALUES ('[Business] Tamarind Residences', 'Wambui', 'Kariuki', '0774849943', '286 Parklands Rd', 'Apt 92', '75649', 'Wajir', 'Subukia', 20);
 INSERT INTO siwaka_dishes.customer (customerName, contactFirstName, contactLastName, phone, addressLine1, addressLine2, postalCode, county, subCounty, salesRepEmployeeNumber) VALUES ('Michel Kiplagat', 'Michel', 'Kiplagat', '0763721088', '537 James Gichuru Rd', 'Apt 97', '76904', 'Embu', 'Naivasha', 13);
 INSERT INTO siwaka_dishes.customer (customerName, contactFirstName, contactLastName, phone, addressLine1, addressLine2, postalCode, county, subCounty, salesRepEmployeeNumber) VALUES ('[Business] Nyali Manor', 'Felix', 'Kabongo', '0740225033', '429 Kiambu Rd', 'Apt 18', '33394', 'Kiambu', 'Subukia', 17);
+/*!40000 ALTER TABLE `customer` ENABLE KEYS */;
+UNLOCK TABLES;
