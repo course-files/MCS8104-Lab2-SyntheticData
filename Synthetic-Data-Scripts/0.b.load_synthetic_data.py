@@ -1,10 +1,11 @@
 import sys
+# pip install mysql-connector-python
 import mysql.connector
 
 # Database connection
 conn = mysql.connector.connect(
     host='localhost',
-    port=3307,
+    port=3306,
     user='student',
     password='5trathm0re',
     database='siwaka_dishes'

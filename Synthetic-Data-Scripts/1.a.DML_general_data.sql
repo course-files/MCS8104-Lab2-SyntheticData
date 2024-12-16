@@ -184,5 +184,5 @@ INSERT INTO siwaka_dishes.product (productCode, productName, productDescription,
 ('P098', 'Malva Pudding', 'A sweet, spongy dessert made with apricot jam and served with a creamy sauce.', 80, 30.00, 70.00, 8),
 ('P099', 'Potjiekos', 'A slow-cooked stew made with meat, vegetables, and spices, traditionally cooked in a cast-iron pot.', 60, 50.00, 100.00, 10),
 ('P100', 'Vetkoek', 'Deep-fried dough balls, often filled with minced meat or served with syrup.', 90, 20.00, 50.00, 8);
-/*!40000 ALTER TABLE `branch` ENABLE KEYS */;
+/*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
