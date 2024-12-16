@@ -5,7 +5,8 @@
 CREATE DATABASE IF NOT EXISTS `siwaka_dishes` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 CREATE USER IF NOT EXISTS `student`@`%` IDENTIFIED WITH caching_sha2_password BY '5trathm0re' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0;
 GRANT USAGE ON * . * TO `student`@`%`;
-GRANT ALL PRIVILEGES ON `siwaka_dishes`.* TO `student`@`%` WITH GRANT OPTION ;
+GRANT SELECT ON `siwaka_dishes`.* TO `student`@`%` WITH GRANT OPTION ;
+REVOKE INSERT, UPDATE, DELETE, ALL PRIVILEGES ON siwaka_dishes.* FROM 'student'@'%';
 FLUSH PRIVILEGES;
 
 USE `siwaka_dishes`;
