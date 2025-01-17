@@ -5,8 +5,7 @@
 CREATE DATABASE IF NOT EXISTS `siwaka_dishes` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 CREATE USER IF NOT EXISTS `student`@`%` IDENTIFIED WITH caching_sha2_password BY '5trathm0re' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0;
 GRANT USAGE ON * . * TO `student`@`%`;
-GRANT SELECT ON `siwaka_dishes`.* TO `student`@`%` WITH GRANT OPTION ;
-REVOKE INSERT, UPDATE, DELETE, ALL PRIVILEGES ON siwaka_dishes.* FROM 'student'@'%';
+GRANT ALL PRIVILEGES ON `siwaka_dishes`.* TO `student`@`%` WITH GRANT OPTION ;
 FLUSH PRIVILEGES;
 
 USE `siwaka_dishes`;
@@ -115,9 +114,9 @@ CREATE TABLE siwaka_dishes.customerOrder (
         ON UPDATE CASCADE
 );
 
--- Create productcategory Table
-CREATE TABLE siwaka_dishes.productcategory (
-    productcategoryID INT AUTO_INCREMENT PRIMARY KEY,
+-- Create productCategory Table
+CREATE TABLE siwaka_dishes.productCategory (
+    productCategoryID INT AUTO_INCREMENT PRIMARY KEY,
     categoryName VARCHAR(50) NOT NULL UNIQUE,
     categoryDescription TEXT
 );
@@ -130,8 +129,8 @@ CREATE TABLE siwaka_dishes.product (
     quantityInStock INT NOT NULL CHECK (quantityInStock >= 0),
     costOfProduction DECIMAL(10, 2) NOT NULL,
     sellingPrice DECIMAL(10, 2) NOT NULL,
-    productcategoryID INT,
-    CONSTRAINT FK_1_productcategory_to_M_product FOREIGN KEY (productcategoryID) REFERENCES siwaka_dishes.productcategory(productcategoryID)
+    productCategoryID INT,
+    CONSTRAINT FK_1_productCategory_to_M_product FOREIGN KEY (productCategoryID) REFERENCES siwaka_dishes.productCategory(productCategoryID)
     ON DELETE SET NULL
     ON UPDATE CASCADE
 );

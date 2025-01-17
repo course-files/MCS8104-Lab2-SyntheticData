@@ -1,1 +1,1 @@
-docker exec -it mysql-8.3.0-personal mysql -u root -h localhost -P 3307 -p
+docker exec -it mysql-8.0.40-debian-lab3 mysql -u root -h localhost -P 3307 -p
