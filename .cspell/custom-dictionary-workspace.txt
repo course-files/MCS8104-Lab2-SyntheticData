@@ -9,3 +9,6 @@ phpmyadmin
 privkey
 SAVEPOINT
 varchar
+5trathm0re
+initdb
+mysqld
