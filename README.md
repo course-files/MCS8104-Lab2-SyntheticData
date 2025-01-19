@@ -1,4 +1,4 @@
-# Lab 2: Stored Routines (Procedures and Functions) and Views
+# Lab: Stored Routines (Procedures and Functions) and Views
 
 | **Key**| Value |
 |---------------|---------------------------------------------------------|
@@ -8,7 +8,8 @@
 ## Lab Manual
 
 Please refer to the Lab Manual provided on Google Classroom for instructions.
-![image](https://github.com/user-attachments/assets/e587f2ee-00fa-4633-a137-730898c3c199)
+![image](https://github.com/user-attachments/assets/39ae8db8-8c47-4065-bf5e-43a2f32c7dff)
+
 
 ## Main Concept
 
