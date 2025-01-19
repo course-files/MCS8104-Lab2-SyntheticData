@@ -10,7 +10,6 @@
 Please refer to the Lab Manual provided on Google Classroom for instructions.
 ![image](https://github.com/user-attachments/assets/e587f2ee-00fa-4633-a137-730898c3c199)
 
-
 ## Main Concept
 
 ![image](https://github.com/user-attachments/assets/69a3c59d-a2d3-4c06-b5bf-f7b0be9e06f4)
