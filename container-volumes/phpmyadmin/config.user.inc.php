@@ -1,7 +1,7 @@
 <?php
 /* Server configuration */
 $i = 1;
-$cfg['Servers'][$i]['host'] = 'mysql-8.0.40-debian-lab3';  // MySQL server hostname
+$cfg['Servers'][$i]['host'] = 'mysql-8.0.40-debian';  // MySQL server hostname
 $cfg['Servers'][$i]['port'] = '3306';  // MySQL server port
 $cfg['Servers'][$i]['auth_type'] = 'cookie';  // Authentication method
 $cfg['Servers'][$i]['user'] = '';  // Default username (optional if using cookie authentication)
@@ -42,7 +42,7 @@ $cfg['Servers'][$i]['auth_type'] = 'cookie';
 $cfg['Servers'][$i]['AllowNoPassword'] = false;
 
 /* phpMyAdmin configuration storage settings */
-$cfg['Servers'][$i]['controlhost'] = 'mysql-8.0.40-debian-lab3';
+$cfg['Servers'][$i]['controlhost'] = 'mysql-8.0.40-debian';
 $cfg['Servers'][$i]['controluser'] = 'pma';
 $cfg['Servers'][$i]['controlpass'] = '5trathm0re';
 $cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';
