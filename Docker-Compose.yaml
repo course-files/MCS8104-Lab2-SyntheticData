@@ -3,8 +3,8 @@ services:
   mysql-8.0.40-debian:
     # image: customized-mysql:1.0
     image: mysql:8.0.40-debian
-    hostname: mysql-8.0.40-debian-lab3
-    container_name: mysql-8.0.40-debian-lab3
+    hostname: mysql-8.0.40-debian
+    container_name: mysql-8.0.40-debian
     restart: always
     ports:
       - 3307:3306
@@ -27,8 +27,8 @@ services:
 
   phpmyadmin-5.2.1:
     image: phpmyadmin:5.2.1
-    hostname: phpmyadmin-5.2.1-lab3
-    container_name: phpmyadmin-5.2.1-lab3
+    hostname: phpmyadmin-5.2.1
+    container_name: phpmyadmin-5.2.1
     restart: always
     ports:
       - 8080:80
@@ -36,7 +36,7 @@ services:
       - MYSQL_ROOT_PASSWORD=5trathm0re
       - MYSQL_USER=student
       - MYSQL_PASSWORD=5trathm0re
-      - PMA_HOST=mysql-8.0.40-debian-lab3
+      - PMA_HOST=mysql-8.0.40-debian
       - PMA_PORT=3306
       - PMA_USER=root
       - PMA_PASSWORD=5trathm0re
