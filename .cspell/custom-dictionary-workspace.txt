@@ -1,15 +1,16 @@
 # Custom Dictionary Words
+5trathm0re
 classicmodels
 Distrib
 dreamhome
 genpkey
+initdb
 InnoDB
+mysqld
 orderdetails
 phpmyadmin
 privkey
+pypmyadmin
 SAVEPOINT
-varchar
-5trathm0re
-initdb
-mysqld
 siwaka
+varchar
