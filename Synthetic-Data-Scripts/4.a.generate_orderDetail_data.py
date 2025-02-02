@@ -11,7 +11,7 @@ conn = mysql.connector.connect(
 )
 cursor = conn.cursor()
 
-# Fetch existing customerOrder, customers, and products
+# Fetch existing customerOrder and products
 cursor.execute("SELECT orderNumber FROM customerOrder")
 customerOrder = cursor.fetchall()
 
@@ -22,11 +22,11 @@ products = cursor.fetchall()
 def generate_order_details():
     for order in customerOrder:
         orderNumber = order[0]
-        num_order_details = random.randint(1, 7)
+        num_order_details = random.randint(1, 3)
         
         for _ in range(num_order_details):
             productCode = random.choice(products)[0]
-            quantity = random.randint(1, 10)
+            quantity = random.randint(1, 8)
 
             cursor.execute("SELECT sellingPrice FROM product WHERE productCode = %s", (productCode,))
             sellingPrice = cursor.fetchone()[0]

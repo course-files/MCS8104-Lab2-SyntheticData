@@ -26,6 +26,29 @@ services:
       exec docker-entrypoint.sh mysqld
       "
 
+  postgres-17.2:
+    image: postgres:17.2
+    hostname: postgres-17.2
+    container_name: postgres-17.2
+    restart: always
+    shm_size: 1g
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 5trathm0re
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      # To store the server's configuration files (postgresql.conf and pg_hba.conf) in the host
+      - postgres-config:/etc/postgresql/
+      # To store the server's log files in the host
+      - postgres-log:/var/log/postgresql/
+      # To store the server's data persistently in the host
+      - postgres-data:/var/lib/postgresql/data
+      # To run the SQL scripts used to create the required databases
+      - postgres-init:/docker-entrypoint-initdb.d/
+    command: postgres -c 'config_file=/etc/postgresql/postgresql.conf'
+
   phpmyadmin-5.2.1:
     image: phpmyadmin:5.2.1
     hostname: phpmyadmin-5.2.1
@@ -72,6 +95,32 @@ volumes:
       type: none
       o: bind
       device: ./container-volumes/mysql/init-scripts/
+
+  # PostgreSQL volumes
+  postgres-config:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./container-volumes/postgresql/etc-postgresql/
+  postgres-log:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./container-volumes/postgresql/var-log-postgresql/
+  postgres-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./container-volumes/postgresql/var-lib-postgresql-data/
+  postgres-init:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./container-volumes/postgresql/init-scripts/
 
   # PHPMyAdmin volumes
   pypmyadmin-config:

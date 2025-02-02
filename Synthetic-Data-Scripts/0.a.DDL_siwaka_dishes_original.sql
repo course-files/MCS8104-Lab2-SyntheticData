@@ -10,6 +10,8 @@ FLUSH PRIVILEGES;
 
 USE `siwaka_dishes`;
 
+START TRANSACTION;
+
 /* ******************
 
 -- If you need to change the password later
@@ -170,3 +172,5 @@ CREATE TABLE siwaka_dishes.orderDetail (
         ON DELETE RESTRICT
         ON UPDATE CASCADE
 );
+
+COMMIT;

@@ -2,8 +2,6 @@
     "recommendations": [
         "ms-azuretools.vscode-docker",
         "redhat.vscode-yaml",
-        "streetsidesoftware.code-spell-checker",
-        "ms-python.python",
         "cweijan.vscode-database-client2"
     ]
 }
