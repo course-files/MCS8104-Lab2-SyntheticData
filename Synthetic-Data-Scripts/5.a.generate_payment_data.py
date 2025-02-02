@@ -13,7 +13,7 @@ conn = mysql.connector.connect(
 )
 cursor = conn.cursor()
 
-# Fetch existing customerOrder and payment methods
+# Fetch existing Customer Order Numbers and Payment Methods
 cursor.execute("SELECT orderNumber, orderDate FROM customerOrder")
 customerOrders = cursor.fetchall()
 
@@ -28,7 +28,7 @@ def generate_payments():
         random_seconds = random.randint(0, int(delta.total_seconds()))
         return start + timedelta(seconds=random_seconds)
 
-    end_date = datetime(2024, 12, 8)
+    end_date = datetime(2025, 2, 3)
 
     for order in customerOrders:
         orderNumber, orderDate = order
@@ -58,13 +58,15 @@ def generate_payments():
             # Generate random payment date on or after the order date
             payment_date = random_date(orderDate, end_date)
             
-            cursor.execute("""
-                INSERT INTO payment (orderNumber, paymentMethodID, amount, paymentDate)
-                VALUES (%s, %s, %s, %s)
-            """, (orderNumber, paymentMethodID, amount_paid, payment_date))
-            
-            with open('./Synthetic-Data-Scripts/4.b.DML_payment_data.sql', 'a') as f:
-                f.write(cursor.statement + ';\n')
+            # cursor.execute("""
+            #     INSERT INTO payment (orderNumber, paymentMethodID, amount, paymentDate)
+            #     VALUES (%s, %s, %s, %s)
+            # """, (orderNumber, paymentMethodID, amount_paid, payment_date))
+
+            sql_statement = """INSERT INTO payment (orderNumber, paymentMethodID, amount, paymentDate) VALUES (%s, %s, %s, '%s');""" % (orderNumber, paymentMethodID, amount_paid, payment_date)
+
+            with open('5.b.DML_payment_data.sql', 'a') as f:
+                f.write(sql_statement + '\n')
         
         # Ensure total amount paid is between 80% and 100% of the total amount expected
         if total_amount_paid < total_amount_expected * decimal.Decimal('0.8'):
@@ -74,13 +76,16 @@ def generate_payments():
             # Generate random payment date on or after the order date
             payment_date = random_date(orderDate, end_date)
             
-            cursor.execute("""
-                INSERT INTO payment (orderNumber, paymentMethodID, amount, paymentDate)
-                VALUES (%s, %s, %s, %s)
-            """, (orderNumber, paymentMethodID, additional_payment, payment_date))
-            
-            with open('./Synthetic-Data-Scripts/5.b.DML_payment_data.sql', 'a') as f:
-                f.write(cursor.statement + ';\n')
+            # cursor.execute("""
+            #     INSERT INTO payment (orderNumber, paymentMethodID, amount, paymentDate)
+            #     VALUES (%s, %s, %s, %s)
+            # """, (orderNumber, paymentMethodID, amount_paid, payment_date))
+
+            sql_statement = """INSERT INTO payment (orderNumber, paymentMethodID, amount, paymentDate) VALUES (%s, %s, %s, '%s');""" % (orderNumber, paymentMethodID, amount_paid, payment_date)
+
+            with open('5.b.DML_payment_data.sql', 'a') as f:
+                f.write(sql_statement + '\n')
+
             decimal.Decimal(total_amount_paid) == decimal.Decimal(total_amount_paid) + decimal.Decimal(additional_payment)
 
 # Generate and insert payments

@@ -44,15 +44,13 @@ for _ in range(10000):
     order_status_id = order_status_ids[randint(0, len(order_status_ids) - 1)]
     customer_number = customer_numbers[randint(0, len(customer_numbers) - 1)]
 
-    cursor.execute("""
-        INSERT INTO `customerOrder` (orderDate, requiredDate, dispatchDate, orderStatusID, customerNumber)
-        VALUES (%s, %s, %s, %s, %s)
-    """, (order_date, required_date, dispatch_date, order_status_id, customer_number))
+    # This inserts the data as it is generated
+    # cursor.execute("""
+    #     INSERT INTO `customerOrder` (orderDate, requiredDate, dispatchDate, orderStatusID, customerNumber)
+    #     VALUES (%s, %s, %s, %s, %s)
+    # """, (order_date, required_date, dispatch_date, order_status_id, customer_number))
     
-    sql_statement = """
-        INSERT INTO `customerOrder` (orderDate, requiredDate, dispatchDate, orderStatusID, customerNumber)
-        VALUES ('%s', '%s', %s, %d, %d);
-    """ % (order_date, required_date, 'NULL' if dispatch_date is None else f"'{dispatch_date}'", order_status_id, customer_number)
+    sql_statement = """INSERT INTO `customerOrder` (orderDate, requiredDate, dispatchDate, orderStatusID, customerNumber) VALUES ('%s', '%s', %s, %d, %d);""" % (order_date, required_date, 'NULL' if dispatch_date is None else f"'{dispatch_date}'", order_status_id, customer_number)
   
     
     with open('3.b.DML_customerOrder_data.sql', 'a') as f:
