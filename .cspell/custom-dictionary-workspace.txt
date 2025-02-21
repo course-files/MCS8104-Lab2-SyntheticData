@@ -8,6 +8,7 @@ initdb
 InnoDB
 mysqld
 orderdetails
+PGDATA
 phpmyadmin
 privkey
 pypmyadmin
