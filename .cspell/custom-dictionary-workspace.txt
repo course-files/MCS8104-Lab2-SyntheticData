@@ -11,6 +11,7 @@ orderdetails
 PGDATA
 phpmyadmin
 privkey
+productcategory
 pypmyadmin
 SAVEPOINT
 siwaka

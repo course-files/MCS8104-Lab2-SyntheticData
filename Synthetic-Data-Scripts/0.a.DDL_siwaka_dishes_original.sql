@@ -17,11 +17,11 @@ START TRANSACTION;
 -- If you need to change the password later
 -- If you need to drop the database and delete the user later
 
-ALTER USER `student`@`%` IDENTIFIED WITH caching_sha2_password BY 'new_password';
+-- ALTER USER `student`@`%` IDENTIFIED WITH caching_sha2_password BY 'new_password';
 
-DROP DATABASE IF EXISTS `siwaka_dishes`;
-REVOKE ALL PRIVILEGES, GRANT OPTION FROM `student`@`%`;
-DROP USER IF EXISTS `student`@`%`;
+-- DROP DATABASE IF EXISTS `siwaka_dishes`;
+-- REVOKE ALL PRIVILEGES, GRANT OPTION FROM `student`@`%`;
+-- DROP USER IF EXISTS `student`@`%`;
 
 */
 
@@ -42,6 +42,7 @@ DROP TABLE IF EXISTS employee;
 DROP TABLE IF EXISTS customer;
 DROP TABLE IF EXISTS orderStatus;
 DROP TABLE IF EXISTS customerOrder;
+DROP TABLE IF EXISTS productcategory;
 DROP TABLE IF EXISTS product;
 DROP TABLE IF EXISTS paymentMethod;
 DROP TABLE IF EXISTS payment;
